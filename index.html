@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Acceptance Rate Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>🎓 Ontario University Acceptance Rate Predictor</h1>
+    <p>Estimate your chances of getting accepted based on GPA, volunteer hours, and extracurricular activities. Made by Mkareos</p>
+    
+    <form id="predictor-form">
+      <div class="form-group">
+        <label for="university">Select University</label>
+        <select id="university">
+          <option value="University of Toronto">University of Toronto</option>
+          <option value="McMaster University">McMaster University</option>
+          <option value="University of Waterloo">University of Waterloo</option>
+          <option value="Queen's University">Queen's University</option>
+          <option value="Western University">Western University</option>
+          <option value="University of Ottawa">University of Ottawa</option>
+          <option value="York University">York University</option>
+          <option value="Carleton University">Carleton University</option>
+          <option value="Ryerson University">Toronto Metropolitan University (formerly Ryerson)</option>
+          <option value="Lakehead University">Lakehead University</option>
+          <option value="Trent University">Trent University</option>
+          <option value="Wilfrid Laurier University">Wilfrid Laurier University</option>
+          <option value="Brock University">Brock University</option>
+          <option value="Nipissing University">Nipissing University</option>
+          <option value="Algoma University">Algoma University</option>
+          <option value="University of Guelph">University of Guelph</option>
+          <option value="Ontario Tech University">Ontario Tech University</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gpa">GPA (out of 4.0)</label>
+        <input type="number" id="gpa" step="0.1" max="4.0" min="0.0" placeholder="Enter your GPA" required />
+      </div>
+
+      <div class="form-group">
+        <label for="hours">Volunteer Hours</label>
+        <input type="number" id="hours" min="0" placeholder="Enter total volunteer hours" required />
+      </div>
+
+      <div class="form-group">
+        <label for="activities">Extracurricular Activities</label>
+        <select id="activities">
+          <option value="High">High involvement (e.g., leadership roles)</option>
+          <option value="Medium">Moderate involvement (e.g., clubs/sports)</option>
+          <option value="Low">Minimal involvement</option>
+        </select>
+      </div>
+
+      <button type="button" id="calculate">Calculate Acceptance Rate</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
